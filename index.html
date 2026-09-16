@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arif Aimran - Data Analyst, Big Data student and freelance data professional portfolio.">
+    <title>Arif Aimran | Data Analyst & Freelancer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f1f1f;
+            background: #f7f7f5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 26px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        .hero {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            padding: 90px 8%;
+            background: #fff;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            color: #666;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(44px, 7vw, 78px);
+            line-height: 1.02;
+            margin-bottom: 22px;
+        }
+
+        h1 span {
+            color: #666;
+        }
+
+        .hero-description {
+            max-width: 680px;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #222;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .btn.primary {
+            background: #222;
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 85px 8%;
+        }
+
+        .section-label {
+            color: #777;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 32px;
+        }
+
+        .about {
+            max-width: 850px;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .about strong {
+            color: #222;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .service {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .service h3 {
+            margin-bottom: 8px;
+        }
+
+        .service p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 9px 14px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            min-height: 245px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .project-number {
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .project h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .project-tech {
+            margin-top: auto;
+            color: #444;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .contact {
+            background: #222;
+            color: #fff;
+        }
+
+        .contact .section-label {
+            color: #aaa;
+        }
+
+        .contact p {
+            max-width: 650px;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .contact .btn {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .contact .btn.primary {
+            background: #fff;
+            color: #222;
+        }
+
+        footer {
+            padding: 24px 8%;
+            background: #222;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero,
+            section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            section {
+                padding-top: 65px;
+                padding-bottom: 65px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Arif.</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">DATA ANALYST • BIG DATA • FREELANCER</p>
+
+            <h1>
+                Hi, I'm <span>Arif.</span>
+            </h1>
+
+            <p class="hero-description">
+                I turn raw data into useful insights through data cleaning,
+                analysis, visualization, dashboards, and machine learning.
+            </p>
+
+            <div class="buttons">
+                <a class="btn primary" href="#projects">View My Work</a>
+                <a class="btn" href="#contact">Hire Me</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- About -->
+    <section id="about">
+        <p class="section-label">ABOUT ME</p>
+        <h2 class="section-title">Turning data into useful information.</h2>
+
+        <p class="about">
+            I am a final-year <strong>Bachelor of Computer Science (Hons.)</strong>
+            student at UiTM, specializing in Big Data, with a CGPA of 3.57.
+            I am interested in data analysis, data science, visualization,
+            and solving real-world problems using data-driven approaches.
+            <br><br>
+            I am also building my freelance portfolio by working on practical
+            projects involving data analysis, dashboards, machine learning,
+            and database systems.
+        </p>
+    </section>
+
+
+    <!-- Services -->
+    <section id="services">
+        <p class="section-label">WHAT I CAN DO</p>
+        <h2 class="section-title">Services</h2>
+
+        <div class="services">
+
+            <div class="service">
+                <h3>Data Cleaning</h3>
+                <p>
+                    Clean, validate, organize, and prepare Excel or CSV datasets
+                    for analysis.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Data Analysis</h3>
+                <p>
+                    Explore datasets, identify patterns, calculate key metrics,
+                    and generate actionable insights.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Power BI Dashboard</h3>
+                <p>
+                    Build simple interactive dashboards for business and
+                    analytical reporting.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Python & SQL</h3>
+                <p>
+                    Perform data processing, analysis, querying, and basic
+                    machine learning using Python and SQL.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+        <p class="section-label">TOOLS & TECHNOLOGIES</p>
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Excel</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Data Cleaning</span>
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Data Visualization</span>
+            <span class="skill">Statistical Analysis</span>
+            <span class="skill">Database Development</span>
+            <span class="skill">Java</span>
+            <span class="skill">C++</span>
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <p class="section-label">SELECTED WORK</p>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects">
+
+            <article class="project">
+                <div class="project-number">01 / MACHINE LEARNING</div>
+                <h3>PM2.5 Air Quality Prediction</h3>
+                <p>
+                    A machine learning project using Random Forest Regression
+                    to forecast PM2.5 levels and support air quality assessment
+                    in Malaysia.
+                </p>
+                <div class="project-tech">
+                    Python • Data Analysis • Random Forest
+                </div>
+            </article>
+
+
+            <article class="project">
+                <div class="project-number">02 / DATA ANALYSIS</div>
+                <h3>E-Commerce Data Analysis</h3>
+                <p>
+                    Analysis of customer, order, product, revenue, and business
+                    data to identify patterns and generate useful insights.
+                </p>
+                <div class="project-tech">
+                    Python • SQL • Excel • Power BI
+                </div>
+            </article>
+
+
+            <article class="project">
+                <div class="project-number">03 / DATABASE SYSTEM</div>
+                <h3>Hostel Management System</h3>
+                <p>
+                    A database-based hostel management system designed to manage
+                    hostel information, student records, rooms, and related
+                    administrative processes.
+                </p>
+                <div class="project-tech">
+                    Java • JSP • Servlet • Derby Database
+                </div>
+            </article>
+
+
+            <article class="project">
+                <div class="project-number">04 / SYSTEM DEVELOPMENT</div>
+                <h3>Book Borrowing and Buying System</h3>
+                <p>
+                    A system for managing books, borrowing transactions,
+                    purchasing activities, and related book records through
+                    a structured database system.
+                </p>
+                <div class="project-tech">
+                    Java • Database • System Development
+                </div>
+            </article>
+
+
+            <article class="project">
+                <div class="project-number">05 / BUSINESS INTELLIGENCE</div>
+                <h3>Sales Analysis Dashboard</h3>
+                <p>
+                    An interactive dashboard for exploring sales performance,
+                    customer behavior, products, and key business metrics.
+                </p>
+                <div class="project-tech">
+                    Power BI • Excel • Data Visualization
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <p class="section-label">GET IN TOUCH</p>
+        <h2 class="section-title">Let's work together.</h2>
+
+        <p>
+            Available for freelance data analysis, data cleaning, dashboard,
+            visualization, and related technical projects.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn" href="https://github.com/iReyyz" target="_blank">
+                GitHub
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Arif Aimran. Data Analyst & Freelancer.
+    </footer>
+
+</body>
+</html>
